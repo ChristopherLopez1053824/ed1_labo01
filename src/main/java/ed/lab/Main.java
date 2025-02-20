@@ -1,7 +1,6 @@
 package ed.lab;
 
 public class Main {
-    private final int lenght = 1000;
     private static final ArrayGenerator<Integer> sortedArrayGenerator= (length -> new Integer[0]); // Reemplácelo por una función lambda
 
     private static final ArrayGenerator<Integer> invertedArrayGenerator = null; // Reemplácelo por una función lambda
