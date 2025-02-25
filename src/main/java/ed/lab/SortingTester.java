@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
+//Terminado
 public class SortingTester<T extends Comparable<T>> {
     private static final int ARRAY_SIZE = 1000;
     private static final int TEST_SIZE = 1000;
