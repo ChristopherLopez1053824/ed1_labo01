@@ -21,7 +21,6 @@ public class Main {
         String[] array = new String[length];
         Random rand = new Random();
         for (int i = 0; i < length; i++) {
-            array[i] = String.valueOf(rand.nextInt(100));
             array[i] = String.valueOf(rand.nextInt(1000));
         }
         return array;
