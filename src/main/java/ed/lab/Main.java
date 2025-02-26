@@ -21,7 +21,7 @@ public class Main {
         Integer[] array = new Integer[length];
         Random rand = new Random();
         for (int i = 0; i < length; i++) {
-            array[i] = rand.nextInt(100);
+            array[i] = rand.nextInt(1000);
         }
         return array;
     }; // Reemplácelo por una función lambda
