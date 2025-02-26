@@ -1,7 +1,7 @@
 package ed.lab;
 import java.util.Random;
 import java.util.Arrays;
-//String
+//String terminado
 public class Main {
     private static final ArrayGenerator<String> sortedArrayGenerator =lenght -> {
         String[] array =  new String[lenght]; // Reemplácelo por una función lambda
