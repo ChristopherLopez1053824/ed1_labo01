@@ -6,13 +6,13 @@ public class Main {
     private static final ArrayGenerator<String> sortedArrayGenerator =lenght -> {
         String[] array =  new String[lenght]; // Reemplácelo por una función lambda
         for (int i = 0; i < lenght; i++) {
-            array[i] = "Elemento " + (i+1);}
+            array[i] = String.valueOf(i);}
         return array;
     };
     private static final ArrayGenerator<String> invertedArrayGenerator = lenght -> {
         String[] array =  new String[lenght];
         for (int i = 0; i < lenght; i++) {
-            array[i] = "Elemento " + (lenght-i);
+            array[i] = String.valueOf(lenght-(i+1));
         }
         return array;
     }; // Reemplácelo por una función lambda
@@ -21,7 +21,7 @@ public class Main {
         String[] array = new String[length];
         Random rand = new Random();
         for (int i = 0; i < length; i++) {
-            array[i] = "Elemento " + rand.nextInt(100);
+            array[i] = String.valueOf(rand.nextInt(100));
         }
         return array;
     }; // Reemplácelo por una función lambda
