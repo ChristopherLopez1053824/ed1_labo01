@@ -6,7 +6,7 @@ public class Main {
     private static final ArrayGenerator<Integer> sortedArrayGenerator =lenght -> {
         Integer[] array =  new Integer[lenght]; // Reemplácelo por una función lambda
         for (int i = 0; i < lenght; i++) {
-        array[i] = i+1;}
+            array[i] = i+1;}
         return array;
     };
     private static final ArrayGenerator<Integer> invertedArrayGenerator = lenght -> {
@@ -183,9 +183,9 @@ class SortingAlgorithms<T extends Comparable<T>>{
         {
             return;
         }
-            int Pivote = partitionR(array, Primero, Ultimo);
-            quicksortR(array, Primero, Pivote-1);
-            quicksortR(array, Pivote+1, Ultimo);
+        int Pivote = partitionR(array, Primero, Ultimo);
+        quicksortR(array, Primero, Pivote-1);
+        quicksortR(array, Pivote+1, Ultimo);
     };
     void randomPivotQuickSort(T[] array)
     {
