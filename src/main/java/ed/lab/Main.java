@@ -1,65 +1,65 @@
 package ed.lab;
 import java.util.Random;
 import java.util.Arrays;
-//String
+//Terminado
 public class Main {
-    private static final ArrayGenerator<String> sortedArrayGenerator =lenght -> {
-        String[] array =  new String[lenght]; // Reemplácelo por una función lambda
+    private static final ArrayGenerator<Integer> sortedArrayGenerator =lenght -> {
+        Integer[] array =  new Integer[lenght]; // Reemplácelo por una función lambda
         for (int i = 0; i < lenght; i++) {
-            array[i] = String.valueOf(i);}
+            array[i] = i+1;}
         return array;
     };
-    private static final ArrayGenerator<String> invertedArrayGenerator = lenght -> {
-        String[] array =  new String[lenght];
+    private static final ArrayGenerator<Integer> invertedArrayGenerator = lenght -> {
+        Integer[] array =  new Integer[lenght];
         for (int i = 0; i < lenght; i++) {
-            array[i] = String.valueOf(lenght-(i+1));
+            array[i] = lenght-i;
         }
         return array;
     }; // Reemplácelo por una función lambda
 
-    private static final ArrayGenerator<String> randomArrayGenerator = length -> {
-        String[] array = new String[length];
+    private static final ArrayGenerator<Integer> randomArrayGenerator = length -> {
+        Integer[] array = new Integer[length];
         Random rand = new Random();
         for (int i = 0; i < length; i++) {
-            array[i] = String.valueOf(rand.nextInt(1000));
+            array[i] = rand.nextInt(1000);
         }
         return array;
     }; // Reemplácelo por una función lambda
 
-    private static final SortingAlgorithms<String> sortingAlgorithms = new SortingAlgorithms<>();
+    private static final SortingAlgorithms<Integer> sortingAlgorithms = new SortingAlgorithms<>();
 
-    private static final QuickSort<String> highPivotQuickSort = sortingAlgorithms::highPivotQuickSort;// Reemplácelo por una referencia a un método
+    private static final QuickSort<Integer> highPivotQuickSort = sortingAlgorithms::highPivotQuickSort;// Reemplácelo por una referencia a un método
 
-    private static final QuickSort<String> lowPivotQuickSort = sortingAlgorithms::lowPivotQuickSort; // Reemplácelo por una referencia a un método
+    private static final QuickSort<Integer> lowPivotQuickSort = sortingAlgorithms::lowPivotQuickSort; // Reemplácelo por una referencia a un método
 
-    private static final QuickSort<String> randomPivotQuickSort = sortingAlgorithms::randomPivotQuickSort; // Reemplácelo por una referencia a un método
+    private static final QuickSort<Integer> randomPivotQuickSort = sortingAlgorithms::randomPivotQuickSort; // Reemplácelo por una referencia a un método
 
-    public static QuickSort<String> getHighPivotQuickSort() {
+    public static QuickSort<Integer> getHighPivotQuickSort() {
         return highPivotQuickSort;
     }
 
-    public static QuickSort<String> getLowPivotQuickSort() {
+    public static QuickSort<Integer> getLowPivotQuickSort() {
         return lowPivotQuickSort;
     }
 
-    public static QuickSort<String> getRandomPivotQuickSort() {
+    public static QuickSort<Integer> getRandomPivotQuickSort() {
         return randomPivotQuickSort;
     }
 
-    public static ArrayGenerator<String> getSortedArrayGenerator() {
+    public static ArrayGenerator<Integer> getSortedArrayGenerator() {
         return sortedArrayGenerator;
     }
 
-    public static ArrayGenerator<String> getInvertedArrayGenerator() {
+    public static ArrayGenerator<Integer> getInvertedArrayGenerator() {
         return invertedArrayGenerator;
     }
 
-    public static ArrayGenerator<String> getRandomArrayGenerator() {
+    public static ArrayGenerator<Integer> getRandomArrayGenerator() {
         return randomArrayGenerator;
     }
 
     public static void main(String[] args) {
-        final SortingTester<String> tester = new SortingTester<>();
+        final SortingTester<Integer> tester = new SortingTester<>();
 
         System.out.println("Ordenando un arreglo ordenado:");
         System.out.println("\tUtilizando el último elemento como pivote: ");
