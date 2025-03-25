@@ -93,19 +93,19 @@ class SortingAlgorithms<T extends Comparable<T>>{
     //Agarrar un pivote alto HighPivot
     int partitionH(T[] array, int Primero, int Ultimo) {
         T pivot = array[Ultimo];
-        int i = Primero-1;
+        int i = Primero;
         for (int j = Primero; j < Ultimo; j++) {
             if (array[j].compareTo(pivot) < 0) {
-                i++;
                 T aux = array[i];
                 array[i] = array[j];
                 array[j] = aux;
+                i++;
             }
         }
-        T aux = array[i+1];
-        array[i+1] = array[Ultimo];
+        T aux = array[i];
+        array[i] = array[Ultimo];
         array[Ultimo] = aux;
-        return i+1;
+        return i;
     }
     void quicksortH(T[] array, int Primero, int Ultimo) {
         if (Primero > Ultimo) {
